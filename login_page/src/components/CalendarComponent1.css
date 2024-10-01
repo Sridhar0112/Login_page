@@ -1,0 +1,129 @@
+body, html {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    /* overflow-y: auto; */
+    justify-content:left;
+  }
+  
+  .calendar-page {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  .left-sidebar {
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .todo-container input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  .todo-container input::placeholder {
+    color: #eee;
+  }
+  
+  .todo-container button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .todo-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .calendar-container {
+    width: 80%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: black;
+  }
+  
+  .calendar-container h1 {
+    padding-left:240px;
+} 
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  
+  .modal-content {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+    background: white;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  @media only screen and (max-width: 1200px) {
+    .calendar-page {
+      flex-direction: column;
+    }
+  
+    .left-sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .calendar-container {
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .todo-container input {
+      width: 90%;
+    }
+  
+    .calendar-container {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .todo-container input, .todo-container button {
+      width: 100%;
+    }
+  
+    .calendar-container {
+      padding: 10px;
+    }
+  }
+  
